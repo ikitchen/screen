@@ -1,3 +1,5 @@
+
+
 export default class ImpulseAction {
 
   constructor(conf) {
@@ -9,12 +11,14 @@ export default class ImpulseAction {
     setTimeout(this.set0.bind(this), this.conf.duration);
   }
 
-  _set0() {
-
+  set0() {
+    const {bus, pin} = this.conf;
+    console.log(`set0: bus=${bus}, pin=${pin}`);
   }
 
-  _set1() {
-    
+  set1() {
+    const {bus, pin} = this.conf;
+    console.log(`set1: bus=${bus}, pin=${pin}`);
   }
 
 

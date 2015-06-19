@@ -2,7 +2,7 @@ import config from './config';
 import Screen from './io/screen';
 import express from 'express';
 import serverConf from './server-conf';
-
+import {createAction} from './io/action-factory';
 
 const app = express();
 const screenDataSource = new Screen();
@@ -17,7 +17,16 @@ app.post('/api/screen/action/:id', (req, res) => {
   console.log('ACTION:', req.params.id);
   screenDataSource.getControlById(req.params.id)
     .then((control) => {
-      console.log(control);
+      const actionConfig = control.action;
+      const action = createAction(actionConfig);
+      action.exec();
+      res.send({
+        done: true,
+      });
+    })
+    .catch((err) => {
+      console.error('error', err);
+      res.sendStatus(500);
     });
 });
 
