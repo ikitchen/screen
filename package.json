@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack-dev-server",
+    "babel-node": "babel-node ./server/server --stage 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.5.4",
+    "babel-core": "^5.1.11",
+    "bivrost": "0.0.7",
+    "boop": "0.0.2",
+    "express": "^4.12.4",
+    "flummox": "3.5.2",
+    "gulp": "^3.9.0",
+    "jade": "^1.11.0",
+    "js-yaml": "^3.3.1",
+    "json-loader": "^0.5.2",
+    "lodash": "^3.9.3",
+    "mcp23017": "0.0.1",
+    "object-assign": "^3.0.0",
+    "q-io": "^1.13.1",
+    "react": "^0.13.2",
+    "tcomb": "^1.0.3",
+    "yaml-loader": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.0.0",
+    "webpack": "^1.8.9",
+    "webpack-dev-server": "^1.8.2"
+  }
+}

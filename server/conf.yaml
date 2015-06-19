@@ -1,0 +1,75 @@
+
+actions:
+    kick:
+        abstract: true
+        type: impulse
+        duration: 500
+    drawer-0000:
+        proto: kick
+        bus: 0x0
+        pin: 0x0
+    drawer-0001:
+        proto: kick
+        bus: 0x0
+        pin: 0x1
+    drawer-0002:
+        proto: kick
+        bus: 0x0
+        pin: 0x2
+    drawer-0003:
+        proto: kick
+        bus: 0x0
+        pin: 0x3
+    fridge-top:
+        proto: kick
+        bus: 0x0
+        pin: 0x4
+    fridge-bottom:
+        proto: kick
+        bus: 0x0
+        pin: 0x5
+
+
+controls:
+  - type: button
+    action: fridge-top
+    caption: Cold store
+    x: 0
+    y: 0
+    w: 2
+    h: 4
+  - type: button
+    action: fridge-bottom
+    caption: Deep freeze
+    x: 0
+    y: 4
+    w: 2
+    h: 2
+  - type: button
+    action: drawer-0000
+    caption: one
+    x: 2
+    y: 4
+    w: 2
+    h: 1
+  - type: button
+    action: drawer-0001
+    caption: two
+    x: 2
+    y: 5
+    w: 2
+    h: 1
+  - type: button
+    caption: three
+    action: drawer-0002
+    x: 4
+    y: 4
+    w: 2
+    h: 1
+  - type: button
+    caption: four
+    action: drawer-0003
+    x: 4
+    y: 5
+    w: 2
+    h: 1
