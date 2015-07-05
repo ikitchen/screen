@@ -1,3 +1,3 @@
 module.exports = {
-  clientBundle: '/app.js',
+  clientBundle: 'http://localhost:8080/bundle.js',
 };
