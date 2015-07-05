@@ -3,11 +3,21 @@ var rename = require("gulp-rename");
 var gutil = require('gulp-util');
 var babel = require('gulp-babel');
 var webpack = require('webpack');
+var sftp = require('gulp-sftp');
+var sftpConf = require('./sftp.conf.json');
+
+
 
 gulp.task('prod', ['backend', 'frontend']);
 
 gulp.task('backend', ['backend.es6', 'backend.copy', 'backend.config']);
 gulp.task('frontend', ['frontend.webpack']);
+
+
+gulp.task('deploy', function() {
+  return gulp.src('dist/*')
+    .pipe(sftp(sftpConf));
+});
 
 gulp.task('backend.copy', function() {
   return gulp.src(['server/**/*.{yaml,jade}', 'package.json'])
