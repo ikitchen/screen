@@ -1,4 +1,4 @@
-import t from tcomb;
+import t from 'tcomb';
 import ActionType from './action-type';
 
 const {maybe, struct, Bool, Str, Num} = t;
@@ -22,4 +22,4 @@ Action.dispatch = function (obj) {
   throw new Error('unknown action type');
 };
 
-export Action;
+export default Action;

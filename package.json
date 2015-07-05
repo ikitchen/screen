@@ -32,6 +32,10 @@
   "devDependencies": {
     "babel": "^5.5.8",
     "babel-loader": "^5.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.6",
     "webpack": "^1.8.9",
     "webpack-dev-server": "^1.8.2"
   }

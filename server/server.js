@@ -1,3 +1,4 @@
+import 'babel/polyfill';
 import config from './config';
 import Screen from './io/screen';
 import express from 'express';
@@ -12,6 +13,7 @@ app.set('conf', serverConf);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+app.use(express.static('public'));
 
 app.post('/api/screen/action/:id', (req, res) => {
   console.log('ACTION:', req.params.id);
