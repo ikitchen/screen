@@ -1,4 +1,4 @@
-import 'babel/polyfill';
+import 'babel-core/polyfill';
 import config from './config';
 import Screen from './io/screen';
 import express from 'express';

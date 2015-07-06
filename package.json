@@ -31,11 +31,15 @@
   "devDependencies": {
     "babel": "^5.5.8",
     "babel-loader": "^5.0.0",
+    "gulp-shell": "^0.4.2",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
+    "gulp-gzip": "^1.1.0",
+    "gulp-install": "^0.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sftp": "^0.1.4",
+    "gulp-tar": "^1.4.0",
     "gulp-util": "^3.0.6",
+    "moment": "^2.10.3",
     "webpack": "^1.8.9",
     "webpack-dev-server": "^1.8.2"
   }
